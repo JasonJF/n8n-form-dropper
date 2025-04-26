@@ -1,0 +1,33 @@
+<!--
+Non-technical: Main page for PDF upload via drag & drop with a progress bar.
+Version: 1.0.0
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PDF Upload</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Upload a PDF</h1>
+  </header>
+
+  <main>
+    <form id="upload-form">
+      <div id="drop-zone" class="drop-zone">
+        <p>Drag & drop a PDF here, or click to select</p>
+        <input type="file" id="file-input" accept="application/pdf" hidden />
+      </div>
+      <button type="button" id="submit-btn">Submit</button>
+    </form>
+
+    <progress id="upload-progress" value="0" max="100"></progress>
+    <div id="status"></div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

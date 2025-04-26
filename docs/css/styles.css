@@ -1,0 +1,49 @@
+/*
+Non-technical: Styles for the PDF upload page (drop zone, progress bar).
+Version: 1.0.0
+*/
+
+body {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.drop-zone.dragover {
+  background-color: #eef;
+}
+
+#submit-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+#upload-progress {
+  width: 100%;
+  height: 20px;
+  margin: 1rem 0;
+  display: none;
+}
+
+#status {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
