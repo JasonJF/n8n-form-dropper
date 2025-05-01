@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let selectedFile  = null;
 
   // Replace this with your actual webhook URL if it changes
-  const webhookUrl = 'https://n8n-fb69.onrender.com/webhook-test/testhook';
-
+  const webhookUrl = 'https://n8n-fb69.onrender.com/webhook/parse-statement';
+  
   // Open file picker when clicking the drop zone
   dropZone.addEventListener('click', () => fileInput.click());
 
@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     xhr.onerror = () => {
       progressBar.style.display = 'none';
       updateStatus('Upload error occurred.', true);
+      console.error(xhr.response);
     };
 
     xhr.send(formData);
